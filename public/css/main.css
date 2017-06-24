@@ -33,3 +33,36 @@ https://github.com/daneden/animate.css/blob/master/animate.css
   margin-bottom: 8px;
   margin-right: 8px;
 }
+.panel:hover,.link:hover{
+  cursor: pointer;
+}
+
+@keyframes whiteToBlack {
+  from {
+    background: white;
+    color:#333;
+  }
+
+  to {
+    background: black;
+    color:#fff;
+  }
+}
+
+.panel-color:hover{
+  animation-name: whiteToBlack;
+  animation-duration: .5s;
+  -webkit-animation-name: whiteToBlack;
+  -webkit-animation-duration: .5s;
+  background: black;
+  color:#fff;
+}
+
+.top-left{
+  position: absolute;
+  top:9%;
+  left:9%;
+}
+.underline:hover{
+  text-decoration: underline;
+}
