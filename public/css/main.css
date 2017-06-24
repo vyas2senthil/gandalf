@@ -27,3 +27,9 @@ https://github.com/daneden/animate.css/blob/master/animate.css
   -webkit-animation-duration: .5s;
   -webkit-animation-fill-mode: both;
 }
+
+.big.badge{
+  font-size: .8em; 
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
