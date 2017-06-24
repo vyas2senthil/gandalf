@@ -1,0 +1,29 @@
+body{
+	margin-top: 50px;
+}
+
+
+/* Stolen and from animate.css 
+
+https://github.com/daneden/animate.css/blob/master/animate.css 
+
+*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+}

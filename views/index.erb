@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product/Category Data Import</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<script type="text/javascript" src="mithril.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+
+		// Client side routing
+
+		m.route.mode = 'pathname'
+		m.route(document.body, '/', {
+		    <% @urlsToPass.each do |u| %>
+		    	<%= '"'+u[:url]+'":'+ u[:mithrilComponent].gsub(/'/,'')+',' %>
+		    <% end %>
+		});
+	</script>
+</body>
+</html>
