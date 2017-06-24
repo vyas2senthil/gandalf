@@ -63,6 +63,10 @@ https://github.com/daneden/animate.css/blob/master/animate.css
   top:9%;
   left:9%;
 }
-.underline:hover{
-  text-decoration: underline;
+.underline,.link:hover > i.fa, .link:hover > span.lead{
+  text-decoration: underline !important;
+  color: #333 !important;
+}
+strong{
+  font-weight: 700;
 }

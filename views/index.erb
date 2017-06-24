@@ -3,13 +3,14 @@
 <head>
 	<title>Product/Category Data Import</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<script type="text/javascript" src="js/mithril.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/components.js"></script>
 	<script type="text/javascript" src="js/pages/uploadYourCsv.js"></script>
 	<script type="text/javascript" src="js/pages/verifyYourResults.js"></script>
@@ -21,7 +22,7 @@
 		        return m('div',{'class':'container text-center fade-in'}, [
 		            m('h1',{},'OSC Product/Category Data Import Tool'),
 		            m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
-		            m('div',{'class':'container-fluid'},[
+		            m('div',{'class':'container'},[
 		                <% @urlsToPass.each_with_index do |u,i| %>
 		                	<% if(i > 0)%>
 					    	linkComponent('<%=u[:url]%>',panelComponent('<%=u[:title]%>','<%=u[:className]%>',<%=u[:mithrilComponent].gsub(/Info/,'')%>,<%=i%>)),
