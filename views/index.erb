@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/mithril.min.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/components.js"></script>
-	<script type="text/javascript" src="js/test.js"></script>
+	<script type="text/javascript" src="js/pages/getStarted.js"></script>
 	<script type="text/javascript" src="js/pages/uploadYourCsv.js"></script>
 	<script type="text/javascript" src="js/pages/verifyYourResults.js"></script>
 	<script type="text/javascript" src="js/pages/importToInterface.js"></script>
@@ -23,27 +23,37 @@
 		    view: function(ctrl, args) {
 		        return m('div',{'class':'container text-center fade-in'}, [
 		        	m('div',{'class':'pull-right text-right container'},[
-		        		m('a',{'href':'/#how-it-works','class':'gandalf top-links hidden-xs hidden-sm'},"How it works"),
-		        		// m('a',{'href':'/#get-started','class':'gandalf top-links hidden-xs hidden-sm'},"Get Started"),
+		        		m('a',{'href':'/get_started','class':'bold-title top-links hidden-xs hidden-sm'},"Get Started"),
+		        		m('a',{'href':'/#how-it-works','class':'bold-title top-links hidden-xs hidden-sm'},"How it works"),
 		        		// m('a',{'href':'/#pricing','class':'gandalf top-links hidden-xs hidden-sm'},"Pricing"),
 		        	]),
-		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('br'),m('br'),m('br'),m('br'),
 		        	m('div',{'class':'container gandalf-container'},[
+		        		m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
 			        	m('h1',{'class':'gandalf large'},'GANDALF'),
-			            m('h2',{'class':'sub-title'},'A Data Import Tool for Oracle Service Cloud'),
+			            m('h2',{'class':'sub-title'},'A Data Import Wizard for Oracle Service Cloud'),
+			            m('br'),m('br'),
+			            m('a',{'class':'bold-title link-button','href':'/get_started'},'Get Started'),
 		        	]),
-		            // m('img',{'src':'/350x450.png','class':'img-responsive centered'}),
-		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
-		        	m('h1',{'class':'gandalf','id':'how-it-works'},'How it Works'),
+		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('h2',{'class':'sub-title text-center container how-it-works','id':'how-it-works'},[
+		        		m('div.col-lg-3.col-md-3.hidden-sm.hidden-xs',{},[]),
+		        		m('div.col-lg-6.col-md-6.col-sm-12.col-xs-12',{},[
+			        		m('span.gandalf',{},'Gandalf '),
+			        		m('span',{},'is a data import wizard that makes it easy to perform data imports on Oracle Service Cloud'),
+			        		m('br'),m('br'),m('br'),m('br'),
+			        		m('span',{},'Here is how it works:'),
+		        		]),
+		        		m('div.col-lg-3.col-md-3.hidden-sm.hidden-xs',{},[]),
+		        	]),
 		        	m('br'),m('br'),m('br'),m('br'),
 		            m('div',{'class':'container'},[
-		                <% @urlsToPass.each_with_index do |u,i| %>
-		                	<% if(i > 0)%>
-					    	linkComponent('<%=u[:url]%>',panelComponent('<%=u[:title]%>','<%=u[:className]%>',<%=u[:mithrilComponent].gsub(/Info/,'')%>,<%=i%>)),
-					    	<% end %>
+		                <% @howItWorks.each_with_index do |u,i| %>
+					    	linkComponent('<%=u[:url]%>',panelComponent('<%=u[:title]%>','<%=u[:className]%>',<%=u[:mithrilComponent].gsub(/Info/,'')%>,<%=i+1%>)),
 					    <% end %>
 		            ]),
-		            m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		            m('br'),m('br'),m('br'),m('br'),
 		        ])
 		    }
 		}

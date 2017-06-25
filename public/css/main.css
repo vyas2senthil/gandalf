@@ -6,6 +6,12 @@ body{
   font-family: "Bungee";
 }
 
+.bold-title{
+  font-family: "Roboto Condensed";
+  /*font-weight: 700;*/
+  text-transform: uppercase;
+}
+
 .centered{
   display:block;
   margin:0 auto;
@@ -15,6 +21,14 @@ body{
   font-size: 6em;
   color:#777;
   text-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+}
+.gandalf-container{
+  /*background: url(/350x450.png) no-repeat center top;*/
+  min-height: 450px;
+}
+
+.how-it-works{
+  line-height: 3;
 }
 
 .sub-title{
@@ -160,4 +174,20 @@ strong{
 .panel-body.panel-component{
   padding:0;
   margin-bottom: 75px;
+}
+.link-button{
+  background: #777;
+  color:#fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding:15px;
+  -webkit-box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+  box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+}
+.link-button:hover{
+  background: black;
+  font-size: 18px;
+  transition:.5s ease;
+  color:#fff !important;
+  text-decoration: none !important;
 }

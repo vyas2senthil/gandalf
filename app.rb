@@ -18,7 +18,9 @@ def mithril_component(title)
 	if title.match(/Home Page/) then 'homePage' else component_name end
 end
 
-urls = [url_hash('Home Page','fa fa-home fa-5x'),
+urls = [
+		url_hash('Home Page','fa fa-home fa-5x'),
+		url_hash('Get Started','fa fa-cloud-upload fa-5x'),
 		url_hash('Upload Your CSV','fa fa-upload fa-5x'),
 		url_hash('Verify Your Results','fa fa-check-circle-o fa-5x'),
 		url_hash('Import to Interface','fa fa-cloud-upload fa-5x'),
@@ -27,6 +29,7 @@ urls = [url_hash('Home Page','fa fa-home fa-5x'),
 urls.each do |u|
 	get u[:url] do
 		@urlsToPass = urls
+		@howItWorks = @urlsToPass.dup.pop(3)
 		erb :index
 	end
 end

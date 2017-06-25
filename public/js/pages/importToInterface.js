@@ -8,7 +8,7 @@ var importToInterfaceInfo = {
         return m('div',{'class':'container text-center fade-in'}, [
             returnHome(m.route()),
             m('br'),m('br'),m('br'),m('br'),
-            m('h1',{'class':'gandalf'},'Import to Interface'),
+            m('h1',{'class':'bold-title'},'Import to Interface'),
             m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
             m('div',{'class':'container lead sub-title text-left'},[
                 m('p',{},'Once your results have been verified, you can import them into the interface of your choosing.'),

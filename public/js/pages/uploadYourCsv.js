@@ -8,7 +8,7 @@ var uploadYourCsvInfo = {
         return m('div',{'class':'container text-center fade-in'}, [
             returnHome(m.route()),
             m('br'),m('br'),m('br'),m('br'),
-            m('h1',{'class':'gandalf'},'Upload your CSV'),
+            m('h1',{'class':'bold-title'},'Upload your CSV'),
             m('br'),m('br'),m('br'),m('br'),
             m('div',{'class':'container text-left sub-title lead'},[
                 m('p',{},[

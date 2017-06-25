@@ -8,7 +8,7 @@ var verifyYourResultsInfo = {
         return m('div',{'class':'container text-center fade-in'}, [
             returnHome(m.route()),
             m('br'),m('br'),m('br'),m('br'),
-            m('h1',{'class':'gandalf'},'Verify Your Results'),
+            m('h1',{'class':'bold-title'},'Verify Your Results'),
             m('br'),m('br'),m('br'),m('br'),
             m('div',{'class':'container lead sub-title text-left'},[
                 m('p',{},'After you have uploaded your CSV file, you will want to verify your results.'),
