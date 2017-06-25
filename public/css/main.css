@@ -22,6 +22,19 @@ body{
   color:#777;
   text-shadow: -5px 5px 5px rgba(0,0,0,0.05);
 }
+
+@media(max-width: 470px){
+  .gandalf.large{
+    font-size: 4em;
+  }
+}
+
+@media(max-width: 330px){
+  .gandalf.large{
+    font-size: 3em;
+  }
+}
+
 .gandalf-container{
   /*background: url(/350x450.png) no-repeat center top;*/
   min-height: 450px;
