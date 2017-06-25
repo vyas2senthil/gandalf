@@ -8,9 +8,9 @@ var uploadYourCsvInfo = {
         return m('div',{'class':'container text-center fade-in'}, [
             returnHome(m.route()),
             m('br'),m('br'),m('br'),m('br'),
-            m('h1',{},'Upload your CSV'),
+            m('h1',{'class':'gandalf'},'Upload your CSV'),
             m('br'),m('br'),m('br'),m('br'),
-            m('div',{'class':'container text-left lead'},[
+            m('div',{'class':'container text-left sub-title lead'},[
                 m('p',{},[
                     m('span',{},'First, you must put together a CSV with the list of products/categories ordered from the lowest level (products or categories '),
                     m('strong',{},'without'),
@@ -22,9 +22,9 @@ var uploadYourCsvInfo = {
                 m('br'),
                 m('p',{},[
                     m('span',{},'For example, if you you had '),
-                    m('strong',{},'4 levels'),
+                    m('strong',{},numberArr.length + ' levels'),
                     m('span',{},' of '),
-                    m('strong',{},'4 products'),
+                    m('strong',{},numberArr.length + ' products'),
                     m('span',{},' to import, the following is how the CSV should be laid out:')
                 ]),
                 csvTable,

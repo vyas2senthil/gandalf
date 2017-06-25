@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Product/Category Data Import</title>
+	<title>Gandalf - A Data Import Tool for Oracle Service Cloud</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Roboto+Condensed:400,700|Roboto:100" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -20,15 +20,28 @@
 		var homePage = {
 		    view: function(ctrl, args) {
 		        return m('div',{'class':'container text-center fade-in'}, [
-		            m('h1',{},'OSC Product/Category Data Import Tool'),
-		            m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('div',{'class':'pull-right text-right container'},[
+		        		m('a',{'href':'/#how-it-works','class':'gandalf top-links hidden-xs hidden-sm'},"How it works"),
+		        		// m('a',{'href':'/#get-started','class':'gandalf top-links hidden-xs hidden-sm'},"Get Started"),
+		        		// m('a',{'href':'/#pricing','class':'gandalf top-links hidden-xs hidden-sm'},"Pricing"),
+		        	]),
+		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('div',{'class':'container gandalf-container'},[
+			        	m('h1',{'class':'gandalf large'},'GANDALF'),
+			            m('h2',{'class':'sub-title'},'A Data Import Tool for Oracle Service Cloud'),
+		        	]),
+		            // m('img',{'src':'/350x450.png','class':'img-responsive centered'}),
+		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
+		        	m('h1',{'class':'gandalf','id':'how-it-works'},'How it Works'),
+		        	m('br'),m('br'),
 		            m('div',{'class':'container'},[
 		                <% @urlsToPass.each_with_index do |u,i| %>
 		                	<% if(i > 0)%>
 					    	linkComponent('<%=u[:url]%>',panelComponent('<%=u[:title]%>','<%=u[:className]%>',<%=u[:mithrilComponent].gsub(/Info/,'')%>,<%=i%>)),
 					    	<% end %>
 					    <% end %>
-		            ])
+		            ]),
+		            m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
 		        ])
 		    }
 		}

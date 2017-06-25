@@ -1,7 +1,24 @@
 body{
 	margin-top: 50px;
 }
+.gandalf{
+  font-family: "Bungee";
+}
 
+.centered{
+  display:block;
+  margin:0 auto;
+}
+
+.gandalf.large{
+  font-size: 6em;
+  color:#777;
+}
+
+.sub-title{
+  font-family: "Roboto";
+  font-weight: 100;
+}
 
 /* Stolen and from animate.css 
 
@@ -21,10 +38,31 @@ https://github.com/daneden/animate.css/blob/master/animate.css
 
 .fade-in {
   animation-name: fadeIn;
-  animation-duration: .5s;
+  animation-duration: 1s;
   animation-fill-mode: both;
   -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: .5s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-right {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
 
@@ -51,9 +89,9 @@ https://github.com/daneden/animate.css/blob/master/animate.css
 
 .panel-color:hover{
   animation-name: whiteToBlack;
-  animation-duration: .5s;
+  animation-duration: 1s;
   -webkit-animation-name: whiteToBlack;
-  -webkit-animation-duration: .5s;
+  -webkit-animation-duration: 1s;
   background: black;
   color:#fff;
 }
@@ -69,4 +107,38 @@ https://github.com/daneden/animate.css/blob/master/animate.css
 }
 strong{
   font-weight: 700;
+}
+
+.top-links{
+  color: #333;
+  margin: 2%;
+}
+
+.indented{
+  margin-left: 30px;
+}
+.no-underline{
+  text-decoration: none !important;
+}
+.no-underline:hover{
+  cursor:auto;
+}
+.nested.link::before{
+  content:"\f0a9";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clicked-on.nested.link::before{
+  content:"\f0ab";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

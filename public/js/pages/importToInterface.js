@@ -6,10 +6,15 @@ var importToInterface = linkComponent('/importToInterface',
 var importToInterfaceInfo = {
     view: function(ctrl, args) {
         return m('div',{'class':'container text-center fade-in'}, [
-            m('h1',{},'Import to Interface'),
+            returnHome(m.route()),
+            m('br'),m('br'),m('br'),m('br'),
+            m('h1',{'class':'gandalf'},'Import to Interface'),
             m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
-            m('div',{'class':'container-fluid'},[
-                m('p',{},'sup')
+            m('div',{'class':'container lead sub-title text-left'},[
+                
+                m('p',{},'Once your results have been verified, you can import them into the interface of your choosing.'),
+                m('br'),
+                m('h2',{'class':'link underline text-center',onclick:function(){ return m.route('/')}},'Back to Home')
             ])
         ])
     }

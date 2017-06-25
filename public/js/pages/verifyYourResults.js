@@ -8,10 +8,10 @@ var verifyYourResultsInfo = {
         return m('div',{'class':'container text-center fade-in'}, [
             returnHome(m.route()),
             m('br'),m('br'),m('br'),m('br'),
-            m('h1',{},'Verify Your Results'),
+            m('h1',{'class':'gandalf'},'Verify Your Results'),
             m('br'),m('br'),m('br'),m('br'),
-            m('div',{'class':'container lead text-left'},[
-                m('p',{},'Next, you will want to verify your results.'),
+            m('div',{'class':'container lead sub-title text-left'},[
+                m('p',{},'After you have uploaded your CSV file, you will want to verify your results.'),
                 m('p',{},'This is to ensure that product/category mapping you are uploading is what you expect.'),
                 m('br'),
                 m('p',{},[
@@ -24,9 +24,12 @@ var verifyYourResultsInfo = {
                         csvTable
                     ]),
                     m('div',{'class':'col-lg-6 col-md-6 col-sm-12 col-xs-12'},[
-                        productCategoryWidget
+                        productCategoryWidget(prodCatHashArray)
                     ]),
                 ]),
+                m('p',{},'Once your results have been verified, you can import them into the interface of your choosing.'),
+                m('br'),
+                m('h2',{'class':'link underline text-center',onclick:function(){ return m.route('/import_to_interface')}},'Next: Import To Interface')
             ])
         ])
     }
