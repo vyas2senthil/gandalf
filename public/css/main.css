@@ -1,6 +1,7 @@
 body{
   margin:50px auto;
   display: block;
+  background: #ecf0f1;
 }
 .gandalf{
   font-family: "Bungee";
@@ -183,6 +184,11 @@ strong{
   -webkit-box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
   box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
 }
+
+.verify_your_results{
+  background:#bdc3c7 !important;
+}
+
 
 .panel-body.panel-component{
   padding:0;

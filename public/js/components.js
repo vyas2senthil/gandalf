@@ -102,9 +102,10 @@ var linkComponent = function(linkRoute,linkText){
 // object || string linkOrObject is the linkOrObject being passed in or the string
 
 var panelComponent = function(panelTitle,iconClass,linkOrObject,index){
+    var snakeCased = panelTitle.toLowerCase().split(' ').join('_');
     return {
         view: function(ctrl,args){
-            return  m('div',{'class':'col-lg-4 col-md-4 col-sm-12 col-xs-12 panel panel-default panel-color'},[
+            return  m('div',{'class':'col-lg-4 col-md-4 col-sm-12 col-xs-12 panel panel-default panel-color ' + snakeCased},[
                         m('h3',{'class':'panel-body panel-component'},[
                             m('span',{'class':'big badge hidden-xs hidden-sm'},index),
                             m('span',{'class':'sub-title'},panelTitle)
