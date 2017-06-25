@@ -1,5 +1,6 @@
 body{
-	margin-top: 50px;
+  margin:50px auto;
+  display: block;
 }
 .gandalf{
   font-family: "Bungee";
@@ -13,6 +14,7 @@ body{
 .gandalf.large{
   font-size: 6em;
   color:#777;
+  text-shadow: -5px 5px 5px rgba(0,0,0,0.05);
 }
 
 .sub-title{
@@ -67,9 +69,14 @@ https://github.com/daneden/animate.css/blob/master/animate.css
 }
 
 .big.badge{
-  font-size: .8em; 
+  font-size: 1em; 
   margin-bottom: 8px;
+  padding: 20px;
   margin-right: 8px;
+  border-radius:0 !important;
+  position: absolute;
+  top:0;
+  left:0;
 }
 .panel:hover,.link:hover{
   cursor: pointer;
@@ -101,7 +108,7 @@ https://github.com/daneden/animate.css/blob/master/animate.css
   top:9%;
   left:9%;
 }
-.underline,.link:hover > i.fa, .link:hover > span.lead{
+.underline,.link:hover > i.fa:not(.fa-home), .link:hover > span.lead{
   text-decoration: underline !important;
   color: #333 !important;
 }
@@ -141,4 +148,16 @@ strong{
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.panel-default.panel-color{
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+  box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+}
+
+.panel-body.panel-component{
+  padding:0;
+  margin-bottom: 75px;
 }

@@ -18,6 +18,7 @@ var uploadYourCsvInfo = {
                     m('strong',{},'with'),
                     m('span',{},' parent relationships).')
                 ]),
+                m('br'),
                 m('p',{},'This is to ensure that the products/categories are created in the correct order.'),
                 m('br'),
                 m('p',{},[
@@ -27,9 +28,15 @@ var uploadYourCsvInfo = {
                     m('strong',{},numberArr.length + ' products'),
                     m('span',{},' to import, the following is how the CSV should be laid out:')
                 ]),
-                csvTable,
+                m('br'),m('br'),
+                m('div',{'class':'container'},[
+                    m('div',{'class':'col-lg-4 col-md-4 hidden-sm hidden-xs'},[]),
+                    m('div',{'class':'col-lg-4 col-md-4 col-sm-12 col-xs-12'},[csvTable]),
+                    m('div',{'class':'col-lg-4 col-md-4 hidden-sm hidden-xs'},[]),
+                ]),
+                m('br'),m('br'),
                 m('p',{},'All that is required is that products/categories are named, listed in the correct order, and reference the name of a parent product or category when applicable.'),
-                m('br'),
+                m('br'),m('br'),
                 m('h2',{'class':'link underline text-center',onclick:function(){ return m.route('/verify_your_results')}},'Next: Verify your results')
             ]),
         ])

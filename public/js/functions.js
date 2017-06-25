@@ -30,7 +30,9 @@ var getTree = function(prodCatArray){
         var prodCat = prodCatArray[i];
         var childrenArray = prodCat.children !=undefined ? prodCat.children : [];
         hash[prodCat['product_name']] = {
-            'product_name':prodCat['product_name'], 'product_parent':prodCat['product_parent'], children: childrenArray
+            'product_name':prodCat['product_name'], 
+            'product_parent':prodCat['product_parent'], 
+            children: childrenArray
         };
     }
     for (var i = 0; i < prodCatArray.length; i++) {

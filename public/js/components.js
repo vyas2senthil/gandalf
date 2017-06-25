@@ -3,11 +3,11 @@
 
 var openChild = openCloseState(prodCatHashArray);
 
-// place holder
+// Product/Category Widget that takes an array
+// array prodCatArray is an array of product/category objects
+// It will build out a nested hierarchy based on the input
 var productCategoryWidget = function(prodCatArray){
     var nestedProdCatObject = getTree(prodCatArray);
-    
-
     return {
         controller: function(){
             return { 
@@ -105,7 +105,7 @@ var panelComponent = function(panelTitle,iconClass,linkComponent,index){
     return {
         view: function(ctrl,args){
             return  m('div',{'class':'col-lg-4 col-md-4 col-sm-12 col-xs-12 panel panel-default panel-color'},[
-                        m('h2',{'class':'panel-body'},[
+                        m('h2',{'class':'panel-body panel-component'},[
                             m('span',{'class':'big badge hidden-xs hidden-sm'},index),
                             m('span',{'class':'sub-title'},panelTitle)
                         ]),

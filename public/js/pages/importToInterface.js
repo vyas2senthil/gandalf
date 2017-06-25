@@ -11,9 +11,15 @@ var importToInterfaceInfo = {
             m('h1',{'class':'gandalf'},'Import to Interface'),
             m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
             m('div',{'class':'container lead sub-title text-left'},[
-                
                 m('p',{},'Once your results have been verified, you can import them into the interface of your choosing.'),
                 m('br'),
+                m('p',{},'You will have the choice to either:'),
+                m('br'),
+                m('ol',{},[
+                    m('li',{},'Use your credentials and the REST API to make these changes.'),
+                    m('li',{},'Download custom controller code to make these changes.'),
+                ]),
+                m('br'),m('br'),
                 m('h2',{'class':'link underline text-center',onclick:function(){ return m.route('/')}},'Back to Home')
             ])
         ])

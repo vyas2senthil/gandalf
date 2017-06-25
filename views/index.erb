@@ -9,9 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	<div id="view"></div>
 	<script type="text/javascript" src="js/mithril.min.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
 	<script type="text/javascript" src="js/pages/uploadYourCsv.js"></script>
 	<script type="text/javascript" src="js/pages/verifyYourResults.js"></script>
 	<script type="text/javascript" src="js/pages/importToInterface.js"></script>
@@ -21,7 +23,7 @@
 		    view: function(ctrl, args) {
 		        return m('div',{'class':'container text-center fade-in'}, [
 		        	m('div',{'class':'pull-right text-right container'},[
-		        		m('a',{'href':'/#how-it-works','class':'gandalf top-links hidden-xs hidden-sm'},"How it works"),
+		        		m('a',{'href':'/','class':'gandalf top-links hidden-xs hidden-sm'},"How it works"),
 		        		// m('a',{'href':'/#get-started','class':'gandalf top-links hidden-xs hidden-sm'},"Get Started"),
 		        		// m('a',{'href':'/#pricing','class':'gandalf top-links hidden-xs hidden-sm'},"Pricing"),
 		        	]),
@@ -33,7 +35,7 @@
 		            // m('img',{'src':'/350x450.png','class':'img-responsive centered'}),
 		        	m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),m('br'),
 		        	m('h1',{'class':'gandalf','id':'how-it-works'},'How it Works'),
-		        	m('br'),m('br'),
+		        	m('br'),m('br'),m('br'),m('br'),
 		            m('div',{'class':'container'},[
 		                <% @urlsToPass.each_with_index do |u,i| %>
 		                	<% if(i > 0)%>
@@ -49,7 +51,7 @@
 		// Client side routing
 
 		m.route.mode = 'pathname';
-		m.route(document.body, '/', {
+		m.route(document.getElementById('view'), '/', {
 		    <% @urlsToPass.each do |u| %>
 		    	<%= '"'+u[:url]+'":'+ u[:mithrilComponent].gsub(/'/,'')+',' %>
 		    <% end %>
