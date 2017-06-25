@@ -124,7 +124,7 @@ strong{
   cursor:auto;
 }
 .nested.link::before{
-  content:"\f0a9";
+  content:"\f0da";
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -134,7 +134,7 @@ strong{
 }
 
 .clicked-on.nested.link::before{
-  content:"\f0ab";
+  content:"\f0d7";
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
