@@ -84,7 +84,7 @@ var linkComponent = function(linkRoute,linkText){
         controller: function(){
             this.migrate = function(linkRoute){
                 scrollTo(0,0);
-                m.route('/upload_your_csv');
+                m.route(linkRoute);
             } 
         },
         view: function(ctrl,args){

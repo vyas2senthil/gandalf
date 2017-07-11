@@ -1,7 +1,7 @@
 "use strict";
 
 var importToInterface = linkComponent('/importToInterface',
-	'Import your data into the interface of your choosing securely using the Oracle Service Cloud REST API.');
+	'Securely import your data into your interface using the Oracle Service Cloud REST API.');
 
 var importToInterfaceInfo = {
     view: function(ctrl, args) {

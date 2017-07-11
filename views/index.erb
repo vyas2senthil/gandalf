@@ -23,9 +23,8 @@
 		    view: function(ctrl, args) {
 		        return m('div',{'class':'container text-center fade-in'}, [
 		        	m('div',{'class':'pull-right text-right container'},[
-		        		m('a',{'href':'/get_started','class':'bold-title top-links hidden-xs hidden-sm'},"Get Started"),
+		        		m('a',{onclick:function(){ return m.route('/get_started')},'class':'link bold-title top-links hidden-xs hidden-sm'},"Get Started"),
 		        		m('a',{'href':'/#how-it-works','class':'bold-title top-links hidden-xs hidden-sm'},"How it works"),
-		        		// m('a',{'href':'/#pricing','class':'gandalf top-links hidden-xs hidden-sm'},"Pricing"),
 		        	]),
 		        	m('br.hidden-sm.hidden-xs'),m('br.hidden-sm.hidden-xs'),m('br.hidden-sm.hidden-xs'),m('br.hidden-sm.hidden-xs'),
 		        	m('div',{'class':'container gandalf-container'},[

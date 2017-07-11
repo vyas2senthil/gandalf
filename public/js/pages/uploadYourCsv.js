@@ -1,7 +1,7 @@
 'use strict';
 
 var uploadYourCsv = linkComponent('/uploadYourCsv',
-    'Upload a CSV with the list of products or categories ordered from the lowest level to the highest level.');
+    'Upload a CSV with the list of business objects ordered from the lowest level to the highest level.');
 
 var uploadYourCsvInfo = {
     view: function(ctrl, args) {

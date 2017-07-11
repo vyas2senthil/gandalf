@@ -1,7 +1,7 @@
 "use strict";
 
 var verifyYourResults = linkComponent('/verifyYourResults',
-	'Verify the results of your CSV upload. Validate the results in the browser before committing your changes.');
+	'Validate the results of your upload in the browser before committing your changes.');
 
 var verifyYourResultsInfo = {
     view: function(ctrl, args) {

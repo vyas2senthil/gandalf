@@ -1,7 +1,7 @@
 "use strict";
 
 var getStarted = linkComponent('/getStarted',
-	'Import your data into the interface of your choosing securely using the Oracle Service Cloud REST API.');
+	'Securely import your data into your interface using the Oracle Service Cloud REST API.');
 
 var getStartedInfo = {
     view: function(ctrl, args) {
